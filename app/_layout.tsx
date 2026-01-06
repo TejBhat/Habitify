@@ -7,7 +7,7 @@ function RouteGuard({children}:{children:React.ReactNode}){
   const isAuth =false;
   useEffect(()=>{
    if (!isAuth){
-        router.replace("/auth");
+        setTimeout(()=>router.replace("/auth"),0);
    }
   });
   return <>{children}</>;
@@ -15,7 +15,7 @@ function RouteGuard({children}:{children:React.ReactNode}){
 export default function RootLayout() {
   return (
     <RouteGuard>
-    <Stack>
+  <Stack>
   <Stack.Screen name="(tabs)" options={{headerShown:false}}/>
   </Stack>
   </RouteGuard>

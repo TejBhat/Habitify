@@ -7,7 +7,7 @@ export default function TabsLayout() {
 <Tabs screenOptions={{tabBarActiveTintColor:"green"}}>
   
 <Tabs.Screen name="index" options={{title:"Home",tabBarIcon:({color})=>(<Entypo name="home" size={24} color={color} />),}}/>
-<Tabs.Screen name="Login" options={{title:"Login",tabBarIcon:({color})=>(<MaterialIcons name="login" size={24} color={color} />),}}/>
+<Tabs.Screen name="login" options={{title:"Login",tabBarIcon:({color})=>(<MaterialIcons name="login" size={24} color={color} />),}}/>
 
 </Tabs>
   );
