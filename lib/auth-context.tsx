@@ -1,12 +1,27 @@
-import  { createContext } from "react";
+import  { createContext, useContext } from "react";
 
+interface AuthContextType {
+    signOut: () => void;
+}
 
+const AuthContext=createContext<AuthContextType | undefined>(undefined)
 
-const AuthContext=createContext(undefined)
 export function AuthProvider({children}:{children:React.ReactNode}){
-    return <></>;
+    const signOut = () => {
+        // TODO: Implement sign out logic
+    };
+
+    return (
+        <AuthContext.Provider value={{ signOut }}>
+            {children}
+        </AuthContext.Provider>
+    );
 }
 
 export function useAuth(){
-
+    const context = useContext(AuthContext);
+    if (!context) {
+        throw new Error('useAuth must be used within an AuthProvider');
+    }
+    return context;
 }
