@@ -1,21 +1,19 @@
 import  { createContext, useContext } from "react";
+import { Models } from "react-native-appwrite";
 
-interface AuthContextType {
-    signOut: () => void;
-}
+type AuthContextType={
+    user:Models.User<Models.Preferences>|null;
+    signUp:(email:string,password:string)=>Promise<void>;
+    signIn:(email:string,password:string)=>Promise<void>;
 
-const AuthContext=createContext<AuthContextType | undefined>(undefined)
+};
+
+
+
+const AuthContext=createContext(undefined)
 
 export function AuthProvider({children}:{children:React.ReactNode}){
-    const signOut = () => {
-        // TODO: Implement sign out logic
-    };
-
-    return (
-        <AuthContext.Provider value={{ signOut }}>
-            {children}
-        </AuthContext.Provider>
-    );
+  return <></>;
 }
 
 export function useAuth(){
