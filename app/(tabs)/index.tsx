@@ -3,11 +3,11 @@ import { Button } from "react-native-paper";
 import { useAuth } from "@/lib/auth-context";
 
 export default function Index() {
-  const {signOut}=useAuth();
+  const {}=useAuth();
   return (
     <View style={styles.view}>
       <Text>My App</Text>
-      <Button mode="text" onPress={signOut} icon={"logout"}>
+      <Button mode="text"  icon={"logout"}>
         {" "}
         Sign Out{""}</Button>
     </View>
