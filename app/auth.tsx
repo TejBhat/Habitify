@@ -47,7 +47,8 @@ export default function AuthScreen(){
     const handleSwitchMode=()=>{
         setIsSignUp((prev)=>!prev);
     }
-    return (<KeyboardAvoidingView behavior={Platform.OS==="android"?"padding":"height"}
+    return (
+    <KeyboardAvoidingView behavior={Platform.OS==="android"?"padding":"height"}
     style={styles.container}>
         <View style={styles.content}>
             <Text style={styles.title} variant="headlineMedium">
