@@ -5,9 +5,7 @@ export default function StreaksScreen(){
     const [habits,setHabits]=useState<string>();
     const [completedHabits,setCompletedHabits]=useState<string>();
 
- let  streak=0;
- let bestStreak=0;
- let lastDate:Date | null=null;
+ 
 
     return(
        <View>
